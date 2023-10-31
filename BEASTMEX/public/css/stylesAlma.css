@@ -1,0 +1,17 @@
+.move-down {
+    margin-top: 50px; 
+    margin-left: 150px;
+}
+
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    margin-right: 100px;
+}
+  
+.button-container button {
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
