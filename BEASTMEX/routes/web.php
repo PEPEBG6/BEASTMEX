@@ -17,7 +17,13 @@ Route::get('/', function(){
 
     return view('login');
 });
+
 Route::get('/almacen', function(){
 
     return view('almacen');
+});
+
+Route::get('/regAlm', function(){
+
+    return view('registroAlmacen');
 });
