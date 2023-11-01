@@ -21,3 +21,7 @@ Route::get('/almacen', function(){
 
     return view('almacen');
 });
+Route::get('/compras', function(){
+
+    return view('compras');
+});
