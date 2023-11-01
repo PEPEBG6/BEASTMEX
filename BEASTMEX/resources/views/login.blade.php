@@ -1,6 +1,9 @@
-@extends('layouts.plantilla')
+@extends('layouts.plantillaLogin')
+
 @section('titulo','Login')
+
 @section('name')
+
 @section('contenido')
     <link rel="stylesheet" href="css/styles.css">
     <div class="card container mb-2 p-4 ">

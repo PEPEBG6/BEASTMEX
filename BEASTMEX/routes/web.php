@@ -20,8 +20,13 @@ Route::get('/', function(){
 Route::get('/almacen', function(){
 
     return view('almacen');
-});
+}); 
 Route::get('/compras', function(){
 
     return view('compras');
 });
+Route::get('/regAlm', function(){
+
+    return view('registroAlmacen');
+});
+ 
