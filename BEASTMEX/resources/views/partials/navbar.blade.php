@@ -14,19 +14,19 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" aria-current="page" href="#">Almacén</a>
+                    <a class="nav-link active fw-bold" aria-current="page" href="/almacen">Almacén</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" href="#">Compras</a>
+                    <a class="nav-link active fw-bold" href="/compras">Compras</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" href="#">Ventas</a>
+                    <a class="nav-link active fw-bold" href="/ventas">Ventas</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" href="#">Gerencia</a>
+                    <a class="nav-link active fw-bold" href="/gerencia">Gerencia</a>
                 </li>
                 
 
