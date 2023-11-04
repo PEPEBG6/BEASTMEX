@@ -30,9 +30,11 @@
                 </li>
                 
 
-                <div class="button-container">
-                    <button type="submit" class="btn btn-light">Log out</button>
+                <div class="b">
+                    <a type="button" class="btn btn-light" href="/">Log out</a>
                 </div>
+
+                
 
             </ul>
             

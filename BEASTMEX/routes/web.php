@@ -49,3 +49,11 @@ Route::get('/regGer', function(){
 
     return view('registroGerencia');
 });
+Route::get('/usuarios', function(){
+
+    return view('usuarios');
+});
+Route::get('/regUsua', function(){
+
+    return view('registroUsuarios');
+});
