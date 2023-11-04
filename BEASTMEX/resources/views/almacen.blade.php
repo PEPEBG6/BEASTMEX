@@ -13,9 +13,14 @@
   <div class="container col-md-11 p-4">
 
         <div class="button-container">
-            <button type="button" class="btn btn-secondary" href="/">PDF</button>
+            <button type="button" class="btn btn-secondary" href="/">Reporte</button>
             <a type="button" class="btn btn-primary " href="/regAlm">+Registrar</a>
         </div>
+
+        <form class="d-flex" role="search">
+            <input class="form-control me-2 w-25" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       
 
         <table class="table">
