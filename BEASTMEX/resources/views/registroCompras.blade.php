@@ -1,4 +1,4 @@
-@extends('layouts.plantillaLogin')
+@extends('layouts.plantilla')
 
 @section('titulo','Compras')
 
