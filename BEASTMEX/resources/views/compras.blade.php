@@ -24,7 +24,7 @@
                         <th scope="col">Productos</th>
                         <th scope="col">Existencia</th>
                         <th scope="col">Foto</th>
-                        <th scope="col">Altas y Bajas</th>
+                        <th scope="col">Provedor Alta y Baja</th>
 
                         
                     </tr>
