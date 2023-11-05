@@ -57,3 +57,11 @@ Route::get('/regUsua', function(){
 
     return view('registroUsuarios');
 });
+Route::get('/consultaCom', function(){
+
+    return view('consultaCompras');
+});
+Route::get('/consultaVen', function(){
+
+    return view('consultaVentas');
+});

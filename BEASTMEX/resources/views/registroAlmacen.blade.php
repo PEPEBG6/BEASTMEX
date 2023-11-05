@@ -1,4 +1,4 @@
-@extends('layouts.plantillaReg')
+@extends('layouts.plantilla')
 
 @section('titulo','Registros')
 

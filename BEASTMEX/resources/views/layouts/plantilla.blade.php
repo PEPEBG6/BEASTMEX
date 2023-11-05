@@ -10,8 +10,7 @@
 
 </head>
 <body>
-
-    @include('partials.navbarReg')
+    
 
     @yield('contenido')
 
