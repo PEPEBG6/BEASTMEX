@@ -16,7 +16,10 @@
             <button type="button" class="btn btn-secondary" href="/">PDF</button>
             <a type="button" class="btn btn-primary " href="/regCom">Orden de Compra</a>
         </div>
-      
+        <form class="d-flex" role="search">
+            <input class="form-control me-2 w-25" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
 
         <table class="table">
                 <thead>
