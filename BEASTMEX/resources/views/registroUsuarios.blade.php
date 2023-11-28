@@ -38,8 +38,8 @@
  
                  <div class="mb-3">
                      <label class="form-label">Correo</label>
-                     <input type="email" name="Correo" class="form-control" required placeholder="Correo" value="{{ old('Correo') }}">
-                     <p class="text-danger fw-bold">{{$errors->first('Correo')}}</p>
+                     <input type="email" name="CorreoUsu" class="form-control" required placeholder="Correo" value="{{ old('Correo') }}">
+                     <p class="text-danger fw-bold">{{$errors->first('CorreoUsu')}}</p>
                  </div>
  
                  <div class="mb-3">

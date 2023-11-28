@@ -17,31 +17,31 @@
  
    
         <div class="card-body">
-            <form method='POST' action='/guardarProducto'>
+            <form method='POST' action='/guardarCompras'>
                 @csrf 
 
                 <div class="mb-3">
                     <label class="form-label">Datos de la empresa</label>
-                    <input type="text" name="Empresa" class="form-control" required placeholder="Datos de la empresa" value="{{ old('Empresa') }}">
+                    <input type="text" name="Empresa" class="form-control"  placeholder="Datos de la empresa" value="{{ old('Empresa') }}">
                     <p class="text-danger fw-bold">{{$errors->first('Empresa')}}</p>
                 </div>
             
                 <div class="mb-3">
                     <label class="form-label">Productos requeridos</label>
-                    <input type="number" name="Productos" class="form-control" required placeholder="Numero de productos" value="{{ old('Productos') }}">
+                    <input type="number" name="Productos" class="form-control"  placeholder="Numero de productos" value="{{ old('Productos') }}">
                     <p class="text-danger fw-bold">{{$errors->first('Productos')}}</p>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Proveedor</label>
-                    <input type="text" name="Provedor" class="form-control" required placeholder="Nombre Proveedor" value="{{ old('Proveedor') }}">
+                    <input type="text" name="Proveedor" class="form-control" placeholder="Nombre Proveedor" value="{{ old('Proveedor') }}">
                     <p class="text-danger fw-bold">{{$errors->first('Proveedor')}}</p>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Enviar a correo</label>
-                    <input type="email" name="Correo" class="form-control" required placeholder="Correo electronico" value="{{ old('Correo') }}">
-                    <p class="text-danger fw-bold">{{$errors->first('Correo')}}</p>
+                    <input type="email" name="CorreoCom" class="form-control" placeholder="Correo electronico" value="{{ old('Correo') }}">
+                    <p class="text-danger fw-bold">{{$errors->first('CorreoCom')}}</p>
                 </div>
 
 

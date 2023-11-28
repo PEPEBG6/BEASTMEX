@@ -22,8 +22,8 @@ class validadorFormBeastmex extends FormRequest
     public function rules(): array
     {
         return [
-            // Definir las reglas de validación aquí
-            'almNombre'=>'required|min:10',
+            // Almacen
+            'almNombre'=>'required',
             'almNoSerie'=>'required',
             'almMarca'=>'required',
             'almCantidad'=>'required',
@@ -31,6 +31,34 @@ class validadorFormBeastmex extends FormRequest
             'almPrecioVen'=>'required',
             'almFechaIn'=>'required',
             'almImagen'=>'required',
+
+
+            //Compras
+            'Empresa'=>'required',
+            'Productos'=>'required',
+            'Proveedor'=>'required',
+            'CorreoCom'=>'required',
+
+            //Usuarios
+            'Nombre'=>'required',
+            'AP'=>'required',
+            'AM'=>'required',
+            'CorreoUsu'=>'required',
+            'puesto'=>'required',
+            'Contraseña'=>'required',
+
+            //Ventas
+            'Producto'=>'required',
+            'Fecha'=>'required',
+            'Cliente'=>'required',
+            'CantidadPro'=>'required',
+            'Marca'=>'required',
+            'Cantidad'=>'required',
+            'Precio'=>'required',
+            'total'=>'required',
+
+
+
 
             
 

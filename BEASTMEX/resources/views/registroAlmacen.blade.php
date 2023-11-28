@@ -37,7 +37,7 @@
     
         
             <div class="card-body">
-                <form method='POST' action='/guardarProducto'>
+                <form method='POST' action='/guardarAlmacen'>
                     @csrf 
     
                     <div class="mb-3">
@@ -67,7 +67,7 @@
                     <div class="mb-3">
                         <label class="form-label">Costo compra</label>
                         <input type="number" name="almCostoC" class="form-control" placeholder="Costo Compra" value="{{ old('almCostoCom') }}">
-                        <p class="text-danger fw-bold">{{$errors->first('almCostoCom')}}</p>
+                        <p class="text-danger fw-bold">{{$errors->first('almCostoC')}}</p>
                     </div>
     
                     <div class="mb-3">
