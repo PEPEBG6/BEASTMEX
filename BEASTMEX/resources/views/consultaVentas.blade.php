@@ -15,7 +15,7 @@
 
         <div class="button-container">
             <button type="button" class="btn btn-secondary" href="/">Reportes</button>
-            <a type="button" class="btn btn-primary " href="/">Graficas</a>
+            <a type="button" class="btn btn-secondary " href="/">Graficas</a>
         </div>
         
 
