@@ -37,4 +37,26 @@ class diarioController extends Controller
         
     
     }
+
+    public function metodoRegistroCompras(){
+        return view('registroCompras');
+    }
+
+    public function metodoGuardarRC(validadorFormBeastmex $req){
+
+        return redirect('/regCom')->with('confirmacion','Todo correcto:'.$req->input('Empresa'));
+        
+    
+    }
+
+    public function metodoRegistroVentas(){
+        return view('registroVentas');
+    }
+
+    public function metodoGuardarVE(validadorFormBeastmex $req){
+
+        return redirect('/regVen')->with('confirmacion','Todo correcto:'.$req->input('Producto'));
+        
+    
+    }
 }

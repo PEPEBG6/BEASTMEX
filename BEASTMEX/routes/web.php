@@ -22,21 +22,25 @@ Route::get('/gerencia', [diarioController::class, 'metodoGerencia'])->name('gere
 Route::get('/regAlm', [diarioController::class, 'metodoRegistroAlmacen'])->name('registroAlmacen');
 
 
-Route::post('/guardarProducto', [diarioController::class, 'metodoGuardarRA'])->name('guardarRA');
+Route::post('/guardarAlmacen', [diarioController::class, 'metodoGuardarRA'])->name('guardarRA');
+
+
+Route::get('/regCom', [diarioController::class, 'metodoRegistroCompras'])->name('registroCompras');
+
+
+Route::post('/guardarCompras', [diarioController::class, 'metodoGuardarRC'])->name('guardarRC');
+
+
+Route::get('/regVen', [diarioController::class, 'metodoRegistroVentas'])->name('registroVentas');
+
+
+Route::post('/guardarVentas', [diarioController::class, 'metodoGuardarVE'])->name('guardarVE');
 
 
 
 
 
 
-Route::get('/regCom', function(){
-
-    return view('registroCompras');
-});
-Route::get('/regVen', function(){
-
-    return view('registroVentas');
-});
 
 Route::get('/regGer', function(){
 
