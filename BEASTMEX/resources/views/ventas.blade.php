@@ -13,6 +13,10 @@
 
 
 
+  <div class="card card-shadow container">
+
+
+
         <div class="button-container">
             <button type="button" class="btn btn-secondary" href="/">PDF</button>
             <a type="button" class="btn btn-primary " href="/regVen">+Registrar</a>
@@ -22,10 +26,13 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         
+
   <div class="card card-shadow container">
 
 
+
         <div class="col-md-11 p-4">
+
 
             <div class="button-container">
                 <button type="button" class="btn btn-secondary" href="/">PDF</button>

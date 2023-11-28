@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ValidadorFormBeastmex;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
+
 use Illuminate\Support\Facades\View;
 
 class diarioController extends Controller
@@ -72,7 +72,7 @@ class diarioController extends Controller
     public function mostrarConsultaVentas()
     {
         return view('consultaVentas');
-=======
+    }
 use App\Http\Requests\validadorFormBeastmex;
 
 class diarioController extends Controller
@@ -106,6 +106,6 @@ class diarioController extends Controller
         return redirect('/regAlm')->with('confirmacion','Todo correcto:'.$req->input('almNombre'));
         
     
->>>>>>> 61c2d1a5079dee44aabe0d41bb4d6593f3ec35fd
+
     }
 }
