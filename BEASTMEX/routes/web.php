@@ -37,7 +37,10 @@ Route::get('/regVen', [diarioController::class, 'metodoRegistroVentas'])->name('
 Route::post('/guardarVentas', [diarioController::class, 'metodoGuardarVE'])->name('guardarVE');
 
 
+Route::get('/regUsua', [diarioController::class, 'metodoRegistroUsuarios'])->name('registroUsuarios');
 
+
+Route::post('/guardarUsuarios', [diarioController::class, 'metodoGuardarUS'])->name('guardarUS');
 
 
 
@@ -50,10 +53,7 @@ Route::get('/usuarios', function(){
 
     return view('usuarios');
 });
-Route::get('/regUsua', function(){
 
-    return view('registroUsuarios');
-});
 Route::get('/consultaCom', function(){
 
     return view('consultaCompras');
