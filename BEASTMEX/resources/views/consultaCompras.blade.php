@@ -3,7 +3,7 @@
 @section('titulo','Registros')
 
 
-@section('contenido ')
+@section('contenido')
 
 
 
