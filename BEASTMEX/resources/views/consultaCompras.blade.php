@@ -1,9 +1,9 @@
 @extends('layouts.plantilla')
 
-@section('titulo','Registros')
+@section('titulo','Compras')
 
 
-@section('contenido ')
+@section('contenido')
 
 
 
