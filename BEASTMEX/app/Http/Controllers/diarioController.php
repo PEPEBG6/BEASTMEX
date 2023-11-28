@@ -59,4 +59,15 @@ class diarioController extends Controller
         
     
     }
+
+    public function metodoRegistroUsuarios(){
+        return view('registroUsuarios');
+    }
+
+    public function metodoGuardarUS(validadorFormBeastmex $req){
+
+        return redirect('/regUsu')->with('confirmacion','Todo correcto:'.$req->input('Nombre'));
+        
+    
+    }
 }

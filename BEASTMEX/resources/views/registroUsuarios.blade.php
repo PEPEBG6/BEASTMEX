@@ -15,36 +15,36 @@
   
     
          <div class="card-body">
-             <form method='POST' action='/guardarUsuario'>
+             <form method='POST' action='/guardarUsuarios'>
                  @csrf 
  
                  <div class="mb-3">
                      <label class="form-label">Nombre</label>
-                     <input type="text" name="Nombre" class="form-control" required placeholder="Nombre" value="{{ old('Nombre') }}">
+                     <input type="text" name="Nombre" class="form-control" placeholder="Nombre" value="{{ old('Nombre') }}">
                      <p class="text-danger fw-bold">{{$errors->first('Nombre')}}</p>
                  </div>
              
                  <div class="mb-3">
                      <label class="form-label">Apellido Paterno</label>
-                     <input type="text" name="AP" class="form-control" required placeholder="Apellido Paterno" value="{{ old('AP') }}">
+                     <input type="text" name="AP" class="form-control" placeholder="Apellido Paterno" value="{{ old('AP') }}">
                      <p class="text-danger fw-bold">{{$errors->first('AP')}}</p>
                  </div>
  
                  <div class="mb-3">
                      <label class="form-label">Apellido Materno</label>
-                     <input type="text" name="AM" class="form-control" required placeholder="Apellido Materni" value="{{ old('AM') }}">
+                     <input type="text" name="AM" class="form-control" placeholder="Apellido Materni" value="{{ old('AM') }}">
                      <p class="text-danger fw-bold">{{$errors->first('AM')}}</p>
                  </div>
  
                  <div class="mb-3">
                      <label class="form-label">Correo</label>
-                     <input type="email" name="CorreoUsu" class="form-control" required placeholder="Correo" value="{{ old('Correo') }}">
+                     <input type="email" name="CorreoUsu" class="form-control" placeholder="Correo" value="{{ old('Correo') }}">
                      <p class="text-danger fw-bold">{{$errors->first('CorreoUsu')}}</p>
                  </div>
  
                  <div class="mb-3">
                     <label class="form-label">Puesto</label>
-                    <select name="puesto" class="form-select" required>
+                    <select name="puesto" class="form-select">
                         <option value="">Selecciona un puesto</option>
                         <option value="Puesto 1">Gerente</option>
                         <option value="Puesto 2">Coordinador compras</option>
@@ -58,7 +58,7 @@
  
                  <div class="mb-3">
                      <label class="form-label">Contraseña</label>
-                     <input type="txt" name="Contraseña" class="form-control" required placeholder="Contraseña" value="{{ old('Contraseña') }}">
+                     <input type="txt" name="Contraseña" class="form-control" placeholder="Contraseña" value="{{ old('Contraseña') }}">
                      <p class="text-danger fw-bold">{{$errors->first('Contraseña')}}</p>
                  </div>
  
