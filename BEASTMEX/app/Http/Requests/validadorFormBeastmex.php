@@ -23,6 +23,26 @@ class ValidadorFormBeastmex extends FormRequest
             'Precio' => 'required|numeric', 
             'Total' => 'required|numeric', 
             
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules(): array
+    {
+        return [
+            // Definir las reglas de validación aquí
+            'almNombre'=>'required|min:10',
+            'almNoSerie'=>'required',
+            'almMarca'=>'required',
+            'almCantidad'=>'required',
+            'almCostoC'=>'required',
+            'almPrecioVen'=>'required',
+            'almFechaIn'=>'required',
+            'almImagen'=>'required',
+
+            
+
         ];
     }
 }

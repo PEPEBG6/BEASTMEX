@@ -1,3 +1,9 @@
+body{
+   
+    background-image:url(fondo.png) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .move-down {
     margin-top: 50px; 
     margin-left: 150px;
@@ -14,4 +20,5 @@
 .button-container button {
     margin-right: 10px; 
 }
+
 

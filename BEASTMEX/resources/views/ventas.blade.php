@@ -1,16 +1,19 @@
 @extends('layouts.plantillaHome')
 
-@section('titulo','Almacen')
+@section('titulo','Ventas')
 
 @section('name')
 
 @section('contenido')
   
     <link rel="stylesheet" href="css/stylesAlma.css">
-   
-  <p class="move-down fs-1 fw-bold">Ventas</p>
 
-  <div class="container col-md-11 p-4">
+   
+  <p class="move-down fs-1 fw-bold text-center text-white">Ventas</p>
+
+
+  <div class="card card-shadow container">
+
 
         <div class="button-container">
             <button type="button" class="btn btn-secondary" href="/">PDF</button>
@@ -20,8 +23,17 @@
             <input class="form-control me-2 w-25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
+        
+        <div class="col-md-11 p-4">
 
-        <table class="table">
+
+            <div class="button-container">
+                <button type="button" class="btn btn-secondary" href="/">PDF</button>
+                <a type="button" class="btn btn-primary " href="/regVen">+Registrar</a>
+            </div>
+        
+
+            <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Productos</th>
@@ -33,8 +45,8 @@
                     </tr>
                 </thead>
             
-        </table>
-
-  </div>
+            </table>
+        </div>           
+    </div>
     
 @endsection

@@ -1,50 +1,43 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\diarioController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::get('/', function(){
+Route::get('/', [diarioController::class, 'metodoLogin'])->name('Login');
 
-    return view('login');
-});
-Route::get('/almacen', function(){
 
-    return view('almacen');
-}); 
-Route::get('/compras', function(){
+Route::get('/almacen', [diarioController::class, 'metodoAlmacen'])->name('Almacen');
 
-    return view('compras');
-});
-Route::get('/regAlm', function(){
 
-    return view('registroAlmacen');
-});
+Route::get('/compras', [diarioController::class, 'metodoCompras'])->name('Compras');
+
+
+Route::get('/ventas', [diarioController::class, 'metodoVentas'])->name('Ventas');
+
+
+Route::get('/gerencia', [diarioController::class, 'metodoGerencia'])->name('gerencia');
+
+
+Route::get('/regAlm', [diarioController::class, 'metodoRegistroAlmacen'])->name('registroAlmacen');
+
+
+Route::post('/guardarProducto', [diarioController::class, 'metodoGuardarRA'])->name('guardarRA');
+
+
+
+
+
+
 Route::get('/regCom', function(){
 
     return view('registroCompras');
-});
-Route::get('/ventas', function(){
-
-    return view('ventas');
 });
 Route::get('/regVen', function(){
 
     return view('registroVentas');
 });
-Route::get('/gerencia', function(){
 
-    return view('gerencia');
-});
 Route::get('/regGer', function(){
 
     return view('registroGerencia');
