@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\validadorFormBeastmex;
+use App\Http\Requests\validadorCompras;
+use App\Http\Requests\validadorVentas;
+use App\Http\Requests\validadorUsuarios;
 
 class diarioController extends Controller
 {
@@ -42,7 +45,7 @@ class diarioController extends Controller
         return view('registroCompras');
     }
 
-    public function metodoGuardarRC(validadorFormBeastmex $req){
+    public function metodoGuardarRC(validadorCompras $req){
 
         return redirect('/regCom')->with('confirmacion','Todo correcto:'.$req->input('Empresa'));
         
@@ -53,7 +56,7 @@ class diarioController extends Controller
         return view('registroVentas');
     }
 
-    public function metodoGuardarVE(validadorFormBeastmex $req){
+    public function metodoGuardarVE(validadorVentas $req){
 
         return redirect('/regVen')->with('confirmacion','Todo correcto:'.$req->input('Producto'));
         
@@ -64,7 +67,7 @@ class diarioController extends Controller
         return view('registroUsuarios');
     }
 
-    public function metodoGuardarUS(validadorFormBeastmex $req){
+    public function metodoGuardarUS(validadorUsuarios $req){
 
         return redirect('/regUsu')->with('confirmacion','Todo correcto:'.$req->input('Nombre'));
         

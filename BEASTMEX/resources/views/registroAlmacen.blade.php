@@ -7,6 +7,8 @@
 
 @section('contenido')
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <div class="container col-md-4 p-4">
 
 
@@ -16,13 +18,11 @@
             <script>
 
                 Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: 'Your work has been saved',
+                title: "Good job!",
                 text: '{{session('confirmacion')}}',
-                showConfirmButton: false,
-                timer: 1500
-                })
+                icon: "success"
+                });
+
 
 
             </script>
@@ -78,7 +78,7 @@
     
                     <div class="mb-3">
                         <label class="form-label">Fecha Ingreso</label>
-                        <input type="date" name="almFechaIn" class="form-control" placeholder="Fecha Ingreso" value="{{ old('almFechaIn') }}">
+                        <input type="text" name="almFechaIn" class="form-control" placeholder="Fecha Ingreso" value="{{ old('almFechaIn') }}">
                         <p class="text-danger fw-bold">{{$errors->first('almFechaIn')}}</p>
                     </div>
     

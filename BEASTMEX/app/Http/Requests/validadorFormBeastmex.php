@@ -23,44 +23,15 @@ class validadorFormBeastmex extends FormRequest
     {
         return [
             // Almacen
-            'almNombre'=>'required',
-            'almNoSerie'=>'required',
-            'almMarca'=>'required',
-            'almCantidad'=>'required',
-            'almCostoC'=>'required',
-            'almPrecioVen'=>'required',
-            'almFechaIn'=>'required',
+            'almNombre'=>'required|alpha',
+            'almNoSerie'=>'required|string',
+            'almMarca'=>'required|alpha',
+            'almCantidad'=>'required|numeric',
+            'almCostoC'=>'required|numeric',
+            'almPrecioVen'=>'required|numeric',
+            'almFechaIn'=>'required|date',
             'almImagen'=>'required',
 
-
-            //Compras
-            'Empresa'=>'required',
-            'Productos'=>'required',
-            'Proveedor'=>'required',
-            'CorreoCom'=>'required',
-
-            //Usuarios
-            'Nombre'=>'required',
-            'AP'=>'required',
-            'AM'=>'required',
-            'CorreoUsu'=>'required',
-            'puesto'=>'required',
-            'Contraseña'=>'required',
-
-            //Ventas
-            'Producto'=>'required',
-            'Fecha'=>'required',
-            'Cliente'=>'required',
-            'CantidadPro'=>'required',
-            'Marca'=>'required',
-            'Cantidad'=>'required',
-            'Precio'=>'required',
-            'total'=>'required',
-
-
-
-
-            
 
         ];
     }
