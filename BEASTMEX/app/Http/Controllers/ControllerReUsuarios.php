@@ -36,6 +36,8 @@ class ControllerReUsuarios extends Controller
             "CorreoUsu" => $request->input('CorreoUsu'),
             "puesto" => $request->input('puesto'),
             "Contraseña" => $request->input('Contraseña'),
+            "created_at"=>Carbon::now(),
+            "updated_at"=>Carbon::now(),
         ]);
 
         return redirect('/registrarUsuarios')->with('confirmacion', 'Tu recuerdo llegó al controlador');
@@ -62,7 +64,16 @@ class ControllerReUsuarios extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        DB::table('registro_compras_table')->where('id',$id)-> update([
+            "Nombre" => $request->input('Nombre'),
+            "AP" => $request->input('AP'),
+            "AM" => $request->input('AM'),
+            "CorreoUsu" => $request->input('CorreoUsu'),
+            "puesto" => $request->input('puesto'),
+            "Contraseña" => $request->input('Contraseña'),
+            "updated_at"=>Carbon::now(),
+    ]);
+            return redirect('/usuarios')->with('confirmacion','Tu recuerdo se modifico en BD');
     }
 
     /**
@@ -70,6 +81,8 @@ class ControllerReUsuarios extends Controller
      */
     public function destroy(string $id)
     {
-        //
-    }
+        DB::table('registro_usuarios_table')->where('id', $id)->delete();
+
+    return redirect('/usuarios')->with('confirmacion', 'Tu recuerdo se eliminó de la BD');
+}
 }

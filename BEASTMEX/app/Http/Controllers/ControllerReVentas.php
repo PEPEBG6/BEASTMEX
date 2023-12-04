@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\validadorVentas; 
 use DB;
+use Carbon\Carbon;
 
 class ControllerReVentas extends Controller
 {
@@ -38,6 +39,8 @@ class ControllerReVentas extends Controller
             "Marca" => $request->input('Marca'),
             "Precio" => $request->input('Precio'),
             "total" => $request->input('total'),
+            "created_at"=>Carbon::now(),
+            "updated_at"=>Carbon::now(),
         ]);
 
         return redirect('/registrarVentas')->with('confirmacion', 'Tu recuerdo llegó al controlador');
@@ -64,7 +67,17 @@ class ControllerReVentas extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // Implementar lógica según sea necesario
+        DB::table('registro_compras_table')->where('id',$id)-> update([
+            "Producto" => $request->input('Producto'),
+            "Fecha" => $request->input('Fecha'),
+            "Cliente" => $request->input('Cliente'),
+            "CantidadPro" => $request->input('CantidadPro'),
+            "Marca" => $request->input('Marca'),
+            "Precio" => $request->input('Precio'),
+            "total" => $request->input('total'),
+            "updated_at"=>Carbon::now(),
+    ]);
+            return redirect('/ventas')->with('confirmacion','Tu recuerdo se modifico en BD');
     }
 
     /**
@@ -72,6 +85,8 @@ class ControllerReVentas extends Controller
      */
     public function destroy(string $id)
     {
-        // Implementar lógica según sea necesario
-    }
+        DB::table('registro_ventas_table')->where('id', $id)->delete();
+
+    return redirect('/ventas')->with('confirmacion', 'Tu recuerdo se eliminó de la BD');
+}
 }

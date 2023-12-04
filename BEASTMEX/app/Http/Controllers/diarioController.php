@@ -74,4 +74,9 @@ class diarioController extends Controller
     {
         return redirect('/registrarUsuarios')->with('confirmacion', 'Todo correcto:' . $req->input('Nombre'));
     }
+
+    public function metodoGerencia()
+    {
+        return view('gerencia');
+    }
 }

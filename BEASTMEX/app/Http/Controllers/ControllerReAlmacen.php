@@ -43,6 +43,8 @@ class ControllerReAlmacen extends Controller
             "almPrecioVen" => $request->input('almPrecioVen'),
             "almFechaIn" => $request->input('almFechaIn'),
             "almImagen" => $rutaImagen,
+            "created_at"=>Carbon::now(),
+            "updated_at"=>Carbon::now(),
         ]);
 
         return redirect('/registrarAlmacen')->with('confirmacion', 'Tu recuerdo llegó al controlador');
@@ -67,9 +69,26 @@ class ControllerReAlmacen extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validadorFormBeastmex $request, string $id)
     {
-        //
+        if ($request->hasFile('almImagen')) {
+            $imagen = $request->file('almImagen');
+            $rutaImagen = $imagen->store('', 'public'); 
+        } else {
+            $rutaImagen = null;
+        }
+        DB::table('registro_almacen_table')->where('id',$id)-> update([
+            "almNombre" => $request->input('almNombre'),
+            "almNoSerie" => $request->input('almNoSerie'),
+            "almMarca" => $request->input('almMarca'),
+            "almCantidad" => $request->input('almCantidad'),
+            "almCostoC" => $request->input('almCostoC'),
+            "almPrecioVen" => $request->input('almPrecioVen'),
+            "almFechaIn" => $request->input('almFechaIn'),
+            "almImagen" => $rutaImagen,
+            "updated_at"=>Carbon::now(),
+    ]);
+            return redirect('/almacen')->with('confirmacion','Tu recuerdo se modifico en BD');
     }
 
     /**
@@ -77,6 +96,9 @@ class ControllerReAlmacen extends Controller
      */
     public function destroy(string $id)
     {
-        //
-    }
+        DB::table('registro_almacen_table')->where('id', $id)->delete();
+
+    return redirect('/almacen')->with('confirmacion', 'Tu recuerdo se eliminó de la BD');
+}
+
 }
