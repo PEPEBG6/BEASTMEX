@@ -21,7 +21,7 @@
 
             <div class="button-container">
                 <button type="button" class="btn btn-secondary" href="/">PDF</button>
-                <a type="button" class="btn btn-primary " href="/regCom">Orden de Compra</a>
+                <a type="button" class="btn btn-primary " href="/registrarCompras">Orden de Compra</a>
             </div>
 
 
@@ -31,13 +31,25 @@
             <table class="table table-striped table-hover m-1 border-1">
                 <thead>
                     <tr>
-                        <th scope="col">Productos</th>
+                        <th scope="col">Empresa</th>
                         <th scope="col">Existencia</th>
-                        <th scope="col">Foto</th>
-                        <th scope="col">Provedor Alta y Baja</th>
+                        <th scope="col">Proveedor</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Imagen</th>
+
 
                         
                     </tr>
+                        @foreach ($consR as $item)
+                            <tr>
+                                <td>{{$item->Empresa}}</td>
+                                <td>{{$item->Productos }}</td>
+                                <td>{{$item->Proveedor }}</td>
+                                <td>{{$item->CorreoCom }}</td>
+                                <td></td>
+                                
+                            </tr>
+                        @endforeach
                 </thead>
                 
             </table>

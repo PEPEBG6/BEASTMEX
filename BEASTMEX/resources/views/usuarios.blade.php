@@ -48,7 +48,7 @@
         <div class="col-md-11 p-4">
 
             <div class="button-container">
-                <a type="button" class="btn btn-primary " href="/regUsua">+Registrar</a>
+                <a type="button" class="btn btn-primary " href="/registrarUsuarios">+Registrar</a>
             </div>
 
             

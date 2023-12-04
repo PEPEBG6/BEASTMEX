@@ -31,6 +31,7 @@ class validadorFormBeastmex extends FormRequest
             'almPrecioVen'=>'required|numeric',
             'almFechaIn'=>'required|date',
             'almImagen'=>'required',
+            
 
 
         ];
