@@ -56,21 +56,21 @@ use App\Http\Controllers\AlmacenController;
 //      return view('registroGerencia');
 //  });
 
- Route::get('/usuarios', function(){
+//  Route::get('/usuarios', function(){
 
-     return view('usuarios');
-});
+//      return view('usuarios');
+// });
 
- Route::get('/consultaCom', function(){
+//  Route::get('/consultaCom', function(){
 
-     return view('consultaCompras');
- });
-  Route::get('/consultaVen', function(){
+//      return view('consultaCompras');
+//  });
+//   Route::get('/consultaVen', function(){
 
-      return view('consultaVentas');
-  });
+//       return view('consultaVentas');
+//   });
   
-Route::get('/registroGerencia', [diarioController::class, 'metodoGerencia'])->name('registroGerencia');
+// Route::get('/registroGerencia', [diarioController::class, 'metodoGerencia'])->name('registroGerencia');
 
 // Rutas para diarioController
 Route::get('/', [diarioController::class, 'metodoLogin'])->name('Login');

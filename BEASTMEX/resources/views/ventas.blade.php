@@ -18,7 +18,7 @@
 
             <div class="button-container">
                 <button type="button" class="btn btn-secondary" href="/">PDF</button>
-                <a type="button" class="btn btn-primary " href="/registrarVentas">+Registrar</a>
+                <a type="button" class="btn btn-primary " href="/registrarVentas">Ticket</a>
             </div>
         
 

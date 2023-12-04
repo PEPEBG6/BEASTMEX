@@ -33,7 +33,7 @@
 
     <div class="card">
         <div class="card-header fs-4  fw-medium text-center">
-            Registros de Ventas
+            Ticket de Ventas
         </div>
     
     
