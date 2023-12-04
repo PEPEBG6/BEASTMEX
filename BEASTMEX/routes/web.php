@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\diarioController;
+use App\Http\Controllers\controllerCrudProductos;
 
 
 Route::get('/', [diarioController::class, 'metodoLogin'])->name('Login');
@@ -62,3 +63,9 @@ Route::get('/consultaVen', function(){
 
     return view('consultaVentas');
 });
+
+
+
+Route::get('/registroAlmacen/create', [controllerCrudProductos::class,'create'])->name('prregistroAlmacenoducto.create');
+Route::post('/registroAlmacen',[controllerCrudProductos::class,'store'])->name('registroAlmacen.store');
+Route::get('/registroAlmacen', [controllerCrudProductos::class,'index'])->name('registroAlmacen.index');

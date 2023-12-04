@@ -23,7 +23,7 @@
 
             <div class="button-container">
                 <button type="button" class="btn btn-secondary" href="/">Reporte</button>
-                <a type="button" class="btn btn-primary " href="/regAlm">Registrar</a>
+                <a type="button" class="btn btn-primary " href="/registroAlmacen/create">Registrar</a>
             </div>
 
             

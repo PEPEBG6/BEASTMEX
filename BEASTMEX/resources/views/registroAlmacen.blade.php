@@ -37,7 +37,7 @@
     
         
             <div class="card-body">
-                <form method='POST' action='/guardarAlmacen'>
+                <form method='POST' action='/registroAlmacen'>
                     @csrf 
     
                     <div class="mb-3">
