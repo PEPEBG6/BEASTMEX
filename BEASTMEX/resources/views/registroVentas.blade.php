@@ -49,37 +49,31 @@
                 
                     <div class="mb-3">
                         <label class="form-label">Fecha</label>
-                        <input type="text" name="Fecha" class="form-control" placeholder="#" value="{{ old('Fecha') }}">
+                        <input type="date" name="Fecha" class="form-control" placeholder="Ingrese la fecha" value="{{ old('Fecha') }}">
                         <p class="text-danger fw-bold">{{$errors->first('Fecha')}}</p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Nombre del cliente</label>
-                        <input type="text" name="Cliente" class="form-control" placeholder="Marca" value="{{ old('Cliente') }}">
+                        <input type="text" name="Cliente" class="form-control" placeholder="Nombre Cliente" value="{{ old('Cliente') }}">
                         <p class="text-danger fw-bold">{{$errors->first('Cliente')}}</p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Producto</label>
-                        <input type="number" name="CantidadPro" class="form-control" placeholder="nombre del producto" value="{{ old('Cantidad') }}">
+                        <label class="form-label">Cantidad de Producto</label>
+                        <input type="number" name="CantidadPro" class="form-control" placeholder="Cantidad de producto" value="{{ old('Cantidad') }}">
                         <p class="text-danger fw-bold">{{$errors->first('Cantidad')}}</p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Marca</label>
-                        <input type="text" name="Marca" class="form-control" placeholder="Costo Compra" value="{{ old('Marca') }}">
+                        <input type="text" name="Marca" class="form-control" placeholder="Marca Producto" value="{{ old('Marca') }}">
                         <p class="text-danger fw-bold">{{$errors->first('Marca')}}</p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Cantidad</label>
-                        <input type="number" name="Cantidad" class="form-control" placeholder="Precio Venta" value="{{ old('Cantidad') }}">
-                        <p class="text-danger fw-bold">{{$errors->first('Cantidad')}}</p>
-                    </div>
-
-                    <div class="mb-3">
                         <label class="form-label">Precio</label>
-                        <input type="number" name="Precio" class="form-control" placeholder="Fecha Ingreso" value="{{ old('Precio') }}">
+                        <input type="number" name="Precio" class="form-control" placeholder="Precio Producto" value="{{ old('Precio') }}">
                         <p class="text-danger fw-bold">{{$errors->first('Precio')}}</p>
                     </div>
 

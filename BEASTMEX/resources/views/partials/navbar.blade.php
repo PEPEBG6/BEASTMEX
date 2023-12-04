@@ -26,6 +26,10 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link active fw-bold text-white" href="/usuarios">Usuarios</a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link active fw-bold text-white" href="/gerencia">Gerencia</a>
                 </li>
                 

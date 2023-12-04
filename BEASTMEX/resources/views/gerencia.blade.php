@@ -14,7 +14,7 @@
 
 
     <div class="d-grid gap-5">
-        <a class="btn btn-primary" type="button" href="/usuarios">Usuarios</a>
+        <a class="btn btn-primary" type="button" href="/consultaUsu">Usuarios</a>
         <a class="btn btn-primary" type="button" href="/consultaCom">Compras</a>
         <a class="btn btn-primary" type="button" href="/consultaVen">Ventas</a>
         <a class="btn btn-primary" type="button" href="/">Ganancias</a>

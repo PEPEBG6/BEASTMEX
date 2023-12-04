@@ -18,7 +18,7 @@
 
             <div class="button-container">
                 <button type="button" class="btn btn-secondary" href="/">PDF</button>
-                <a type="button" class="btn btn-primary " href="/regVen">+Registrar</a>
+                <a type="button" class="btn btn-primary " href="/registrarVentas">+Registrar</a>
             </div>
         
 
@@ -31,7 +31,19 @@
                         <th scope="col">Cantidad</th>
                         <th scope="col">Costo</th>
                         <th scope="col">Foto</th>
+                        <th scope="col">Foto</th>
                     </tr>
+                        @foreach ($consR as $item)
+                            <tr>
+                                <td>{{$item->Producto}}</td>
+                                <td>{{$item->Fecha }}</td>
+                                <td>{{$item->Cliente }}</td>
+                                <td>{{$item->CantidadPro }}</td>
+                                <td>{{$item->Marca }}</td>
+                                <td>{{$item->Precio }}</td>
+                                <td>{{$item->total }}</td>
+                            </tr>
+                        @endforeach
                 </thead>
             
             </table>

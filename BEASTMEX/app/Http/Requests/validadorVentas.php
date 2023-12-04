@@ -28,7 +28,6 @@ class validadorVentas extends FormRequest
             'Cliente'=>'required|alpha',
             'CantidadPro'=>'required|numeric',
             'Marca'=>'required|alpha',
-            'Cantidad'=>'required|numeric',
             'Precio'=>'required|numeric',
             'total'=>'required|numeric',
         ];

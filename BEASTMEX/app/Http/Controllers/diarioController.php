@@ -10,67 +10,68 @@ use App\Http\Requests\validadorUsuarios;
 
 class diarioController extends Controller
 {
-    public function metodoLogin(){
+    public function metodoLogin()
+    {
         return view('login');
     }
 
-    public function metodoAlmacen(){
-        return view('almacen');
+    public function metodoAlmacen()
+    {
+        return redirect()->route('Almacen.index');
     }
 
-    public function metodoCompras(){
-        return view('compras');
+    public function metodoCompras()
+    {
+        return redirect()->route('Compras.index');
     }
 
-    public function metodoVentas(){
-        return view('ventas');
+    public function metodoVentas()
+    {
+        return redirect()->route('Ventas.index');
     }
 
-    public function metodoGerencia(){
-        return view('gerencia');
+    public function metodoUsuarios()
+    {
+        return redirect()->route('Usuarios.index');
     }
 
-    public function metodoRegistroAlmacen(){
+    public function metodoRegistroAlmacen()
+    {
         return view('registroAlmacen');
     }
 
-    public function metodoGuardarRA(validadorFormBeastmex $req){
-
-        return redirect('/regAlm')->with('confirmacion','Todo correcto:'.$req->input('almNombre'));
-        
-    
+    public function metodoGuardarRA(validadorFormBeastmex $req)
+    {
+        return redirect('/regAlm')->with('confirmacion', 'Todo correcto:' . $req->input('almNombre'));
     }
 
-    public function metodoRegistroCompras(){
+    public function metodoRegistroCompras()
+    {
         return view('registroCompras');
     }
 
-    public function metodoGuardarRC(validadorCompras $req){
-
-        return redirect('/regCom')->with('confirmacion','Todo correcto:'.$req->input('Empresa'));
-        
-    
+    public function metodoGuardarRC(validadorCompras $req)
+    {
+        return redirect('/registrarCompras')->with('confirmacion', 'Todo correcto:' . $req->input('Empresa'));
     }
 
-    public function metodoRegistroVentas(){
+    public function metodoRegistroVentas()
+    {
         return view('registroVentas');
     }
 
-    public function metodoGuardarVE(validadorVentas $req){
-
-        return redirect('/regVen')->with('confirmacion','Todo correcto:'.$req->input('Producto'));
-        
-    
+    public function metodoGuardarVE(validadorVentas $req)
+    {
+        return redirect('/registrarVentas')->with('confirmacion', 'Todo correcto:' . $req->input('Producto'));
     }
 
-    public function metodoRegistroUsuarios(){
+    public function metodoRegistroUsuarios()
+    {
         return view('registroUsuarios');
     }
 
-    public function metodoGuardarUS(validadorUsuarios $req){
-
-        return redirect('/regUsu')->with('confirmacion','Todo correcto:'.$req->input('Nombre'));
-        
-    
+    public function metodoGuardarUS(validadorUsuarios $req)
+    {
+        return redirect('/registrarUsuarios')->with('confirmacion', 'Todo correcto:' . $req->input('Nombre'));
     }
 }

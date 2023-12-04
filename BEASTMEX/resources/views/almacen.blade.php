@@ -23,7 +23,7 @@
 
             <div class="button-container">
                 <button type="button" class="btn btn-secondary" href="/">Reporte</button>
-                <a type="button" class="btn btn-primary " href="/regAlm">Registrar</a>
+                <a type="button" class="btn btn-primary " href="/registrarAlmacen">Registrar</a>
             </div>
 
             
@@ -42,11 +42,24 @@
                             <th scope="col">Foto</th>
                             <th scope="col">Opciones</th>
                         </tr>
-                        <tr>
-                            <td>
-                                gr
-                            </td>
-                        </tr>
+                        @foreach ($consR as $item)
+                            <tr>
+                                <td>{{$item->almNoSerie}}</td>
+                                <td>{{$item->almNombre }}</td>
+                                <td>{{$item->almMarca }}</td>
+                                <td>{{$item->almCantidad }}</td>
+                                <td>{{$item->almCostoC }}</td>
+                                <td>{{$item->almPrecioVen }}</td>
+                                <td>{{$item->almFechaIn }}</td>
+                                <td>
+                                    @if($item->almImagen)
+                                        <img src="{{ asset('imagenes/' . $item->almImagen) }}" alt="Imagen del Producto" style="max-width: 100px; max-height: 100px;">
+                                    @endif
+                                </td>
+                                <td></td>
+                                
+                            </tr>
+                        @endforeach
                     </thead>
                 
             </table>
